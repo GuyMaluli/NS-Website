@@ -22,7 +22,7 @@ This project was created, designed, and developed by **Guy Moshe Malul**.
 
 ### Copyright
 
-© All Rights Reserved – Guy Moshe Malul.
+© All Rights Reserved Guy Moshe Malul.
 
 No part of this project, including its source code, design, graphics, images, logos, or any other content, may be copied, reproduced, modified, distributed, published, sold, or used in any form without the prior written permission of the copyright owner.
 
