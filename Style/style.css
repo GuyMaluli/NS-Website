@@ -1244,3 +1244,16 @@ body{
     top:57px!important
   }
 }
+
+
+footer span a {
+  font-weight: 700;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+footer span a:hover {
+  opacity: 0.8;
+}
+
