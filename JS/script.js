@@ -26,16 +26,15 @@ function move(){
 }
 
 move();
-const footerLabel = document.querySelector('footer span');
-
-if (footerLabel) {
-  footerLabel.innerHTML = `
-    <a href="https://github.com/GuyMaluli" 
-       target="_blank" 
-       rel="noopener noreferrer">
-      האתר נבנה ע״י גיא מאלול
-    </a>
-  `;
+const footerLabel=document.querySelector('footer span');
+if(footerLabel)footerLabel.textContent='האתר נבנה ע״י גיא מאלול';
+const revealTargets=document.querySelectorAll('.intro,.services,.projects,.contact,.services article');
+revealTargets.forEach(item=>item.classList.add('reveal'));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    entry.target.classList.add('shown');
+    observer.unobserve(entry.target)
+  }
 }
 
 ),{
