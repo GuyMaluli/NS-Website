@@ -27,16 +27,14 @@ function move(){
 
 move();
 const footerLabel=document.querySelector('footer span');
-if(footerLabel){
-  const footerLink=document.createElement('a');
-  footerLink.className='footer-credit';
-  footerLink.href='https://github.com/GuyMaluli';
-  footerLink.target='_blank';
-  footerLink.rel='noopener noreferrer';
-  footerLink.textContent='האתר נבנה ע״י גיא מאלול';
-  footerLink.addEventListener('pointerenter',()=>cursor.classList.add('active'));
-  footerLink.addEventListener('pointerleave',()=>cursor.classList.remove('active'));
-  footerLabel.replaceWith(footerLink);
+if(footerLabel)footerLabel.textContent='האתר נבנה ע״י גיא מאלול';
+const revealTargets=document.querySelectorAll('.intro,.services,.projects,.contact,.services article');
+revealTargets.forEach(item=>item.classList.add('reveal'));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){
+    entry.target.classList.add('shown');
+    observer.unobserve(entry.target)
+  }
 }
 
 ),{
