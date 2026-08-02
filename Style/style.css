@@ -400,14 +400,6 @@ footer a{
   text-decoration:none
 }
 
-footer .footer-credit{
-  display:inline-block;
-  padding-bottom:4px;
-  border-bottom:1px solid currentColor;
-  font-weight:700;
-  transition:color .2s,border-color .2s
-}
-
 .cursor{
   width:38px;
   height:38px;
