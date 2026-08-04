@@ -1245,11 +1245,17 @@ body{
   }
 }
 
-footer .footer-credit {
-  color: #a9adb2;
-  font-weight: 700;
+.footer-credit {
+  color: #B5A26A;
+  font-weight: 500;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-  cursor: pointer;
+  text-decoration-color: #B5A26A;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: all .25s ease;
+}
+
+.footer-credit:hover {
+  color: #C7B47A;
+  text-decoration-color: #C7B47A;
 }
