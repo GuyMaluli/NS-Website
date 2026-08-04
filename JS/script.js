@@ -26,16 +26,41 @@ function move(){
 }
 
 move();
-const footerLabel=document.querySelector('footer span');
-if(footerLabel)footerLabel.textContent='האתר נבנה ע״י גיא מאלול';
-const revealTargets=document.querySelectorAll('.intro,.services,.projects,.contact,.services article');
-revealTargets.forEach(item=>item.classList.add('reveal'));
-const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  if(entry.isIntersecting){
-    entry.target.classList.add('shown');
-    observer.unobserve(entry.target)
-  }
+
+const footerLabel = document.querySelector('footer span');
+
+if (footerLabel) {
+  const footerLink = document.createElement('a');
+
+  footerLink.className = 'footer-credit';
+  footerLink.href = 'https://github.com/GuyMaluli';
+  footerLink.target = '_blank';
+  footerLink.rel = 'noopener noreferrer';
+  footerLink.textContent = 'האתר נבנה ע״י גיא משה מאלול';
+
+  footerLabel.replaceWith(footerLink);
 }
+
+const revealTargets = document.querySelectorAll(
+  '.intro, .services, .projects, .contact, .services article'
+);
+
+revealTargets.forEach(item => {
+  item.classList.add('reveal');
+});
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('shown');
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+revealTargets.forEach(item => {
+  observer.observe(item);
+});
 
 ),{
   threshold:.12
