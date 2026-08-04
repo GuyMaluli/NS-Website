@@ -26,16 +26,26 @@ function move(){
 }
 
 move();
-const footerLabel=document.querySelector('footer span');
-if(footerLabel){
-  const footerLink=document.createElement('a');
-  footerLink.className='footer-credit';
-  footerLink.href='https://github.com/GuyMaluli';
-  footerLink.target='_blank';
-  footerLink.rel='noopener noreferrer';
-  footerLink.textContent='האתר נבנה ע״י גיא מאלול';
-  footerLink.addEventListener('pointerenter',()=>cursor.classList.add('active'));
-  footerLink.addEventListener('pointerleave',()=>cursor.classList.remove('active'));
+
+const footerLabel = document.querySelector('footer span');
+
+if (footerLabel) {
+  const footerLink = document.createElement('a');
+
+  footerLink.className = 'footer-credit';
+  footerLink.href = 'https://github.com/GuyMaluli';
+  footerLink.target = '_blank';
+  footerLink.rel = 'noopener noreferrer';
+  footerLink.textContent = 'האתר נבנה ע״י גיא משה מאלול';
+
+  footerLink.addEventListener('pointerenter', () => {
+    cursor.classList.add('active');
+  });
+
+  footerLink.addEventListener('pointerleave', () => {
+    cursor.classList.remove('active');
+  });
+
   footerLabel.replaceWith(footerLink);
 }
 
