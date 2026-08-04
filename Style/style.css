@@ -401,11 +401,16 @@ footer a{
 }
 
 footer .footer-credit{
-  display:inline-block;
-  padding-bottom:4px;
-  border-bottom:1px solid currentColor;
+  color:#fff;
   font-weight:700;
-  transition:color .2s,border-color .2s
+  text-decoration:none;
+  border-bottom:2px solid transparent;
+  transition:.25s;
+}
+
+footer .footer-credit:hover{
+  color:#4da3ff;
+  border-bottom-color:#4da3ff;
 }
 
 .cursor{
