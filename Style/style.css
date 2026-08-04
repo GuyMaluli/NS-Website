@@ -400,19 +400,6 @@ footer a{
   text-decoration:none
 }
 
-footer .footer-credit{
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-  border-bottom:2px solid transparent;
-  transition:.25s;
-}
-
-footer .footer-credit:hover{
-  color:#4da3ff;
-  border-bottom-color:#4da3ff;
-}
-
 .cursor{
   width:38px;
   height:38px;
@@ -1257,6 +1244,3 @@ body{
     top:57px!important
   }
 }
-
-
-
